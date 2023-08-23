@@ -1,0 +1,78 @@
+\documentclass{article}
+
+\usepackage[margin=1in]{geometry}
+
+\usepackage{algorithm,algorithmic}
+\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+\renewcommand{\algorithmicensure}{\textbf{Output:}}
+\renewcommand{\algorithmiccomment}[2]{\hspace{#1}$\triangleright$ {#2} \hfill }
+
+\usepackage{amsfonts}
+\def\R{{\mathbb R}}
+\def\N{{\mathbb N}}
+
+\title{Linear Search}
+\author{CSCI 432}
+
+\begin{document}
+\maketitle
+
+\noindent
+Name:\\
+Who did you work with today?
+
+\section*{Linear Search Algorithms}
+
+The following algorithm takes as input a array $L$ and a query element $q$, and returns
+true if the element is in the list and false otherwise.
+
+\begin{algorithm}[h]
+    \caption{Linear Search I}
+    %
+    \begin{algorithmic}[1]
+        \REQUIRE $L$, a list of real numbers
+
+        \ENSURE $q$, a query element (a real number)
+
+        \FOR {$i= 1$ to $|L|$}
+            \IF {q=L(i)}
+                \RETURN TRUE
+            \ENDIF
+        \ENDFOR
+
+        \RETURN FALSE
+
+    \end{algorithmic}
+\end{algorithm}
+
+\begin{algorithm}[h]
+    \caption{Linear Search II}
+    %
+    \begin{algorithmic}[1]
+        \REQUIRE $L$, a list of real numbers
+
+        \ENSURE $q$, a query element (a real number)
+
+        \STATE $found \gets$ FALSE
+
+        \FOR {$i= 1$ to $|L|$}
+            \IF {q=L(i)}
+                \STATE $found \gets$ TRUE
+            \ENDIF
+        \ENDFOR
+
+        \RETURN $found$
+
+    \end{algorithmic}
+\end{algorithm}
+
+
+
+Discuss the following questions:
+
+\begin{enumerate}
+    \item Are these two pseudo-code examples of the same algorithm?
+    \item Do the two have the same runtimes?
+\end{enumerate}
+
+\end{document}
