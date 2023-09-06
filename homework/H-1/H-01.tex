@@ -1,0 +1,254 @@
+\documentclass{article}
+\usepackage{../fasy-hw}
+
+%% UPDATE these variables:
+\renewcommand{\hwnum}{1}
+\title{Advanced Algorithms, Homework \hwnum}
+\collab{none}
+\author{\todo{Your Name Here}}
+\date{due: Friday, 15 September 2022}
+
+\begin{document}
+
+\maketitle
+
+This homework assignment should be
+submitted as a single PDF file both to D2L and to Gradescope.  For this
+homework, and this homework only, there is no penalty for submitting late.
+
+General homework expectations:
+\begin{itemize}
+    \item Homework should be typeset using LaTex.
+    \item Answers should be in complete sentences and proofread.
+    \item You will not plagiarize, nor will you share your written solutions
+        with classmates.
+    \item List collaborators at the start of each question using the
+        \texttt{collab} command.
+    \item List any outside resources that you used within each problem (not at
+        the end of the problem set). If not clear from context, explain how the
+        external resource was used.
+    \item Put your answers where the \texttt{todo} command currently is (and
+        remove the \texttt{todo}, but not the word \texttt{Answer}).
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\collab{\todo{list your collaborators here}}
+\nextprob{The Course Website and Syllabus}
+
+Please take a look at the \href{https://msu.github.io/csci-432-fall2023/}{course
+website}.
+
+Answer the following questions:
+\begin{enumerate}
+
+    \item This website is made using GitHub Pages.  Find one commit message and
+        provide the commit hash, the author of the commit, and the files edited.
+
+         \paragraph{Answer} \todo{}
+
+    \item What are Dr.~Fasy's office hours?
+
+         \paragraph{Answer} \todo{}
+
+    \item Where can you find links to the lecture notes?
+
+         \paragraph{Answer} \todo{}
+
+    \item The section on the use of ChatGPT is currently blank.  What is your
+        suggestion for appropriate use of ChatGPT in this class?
+
+         \paragraph{Answer} \todo{}
+
+    \item In the last HW, you identified your weaknesses from the prerequisite
+        material.  What have you been doing to dust off those cobwebs?
+
+         \paragraph{Answer} \todo{}
+
+     \item (Bonus) See an error?  Issue a PR!
+
+         \paragraph{Answer} \todo{state whether you issued a PR or not}
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\collab{\todo{}}
+\nextprob{Induction}
+
+There are a couple series that we see consistently in many algorithms.  One of
+them is the following:
+$$
+    \sum_{i=1}^n i
+$$
+
+State the solution in both \emph{closed form} and the \emph{asymptotic form}.
+Then, use induction to prove that the asymptotic form is correct
+(Note: when giving asymptotic form, the preference is always to
+provide the bound using $\Theta$ notation, if possible).
+
+\paragraph{Answer}
+\todo{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\collab{\todo{}}
+\nextprob{Big-O}
+Use the definition of big-O notation to prove that $f(x)=n^2 + 3n -2$ is
+$O(n^2)$.
+
+\paragraph{Answer}
+
+\todo{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\collab{\todo{}}
+\nextprob{If/Then Statements}
+Consider the following statement: \emph{If $a$ and $b$ are both even numbers, then $ab$ is
+an even number}.
+\begin{enumerate}
+    \item What is the contrapositive of this statement?
+
+        \paragraph{Answer}
+        \todo{}
+
+    \item What is the converse of this statement?
+
+        \paragraph{Answer}
+        \todo{}
+
+    \item What is the definition of an odd number?
+
+        \paragraph{Answer}
+        \todo{}
+
+    \item What is the definition of an even number?
+
+        \paragraph{Answer}
+        \todo{}
+
+    \item Prove this statement.
+
+        \paragraph{Answer}
+        \todo{}
+
+\end{enumerate}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\collab{\todo{}}
+\nextprob{Sorting}
+Consider your favorite sorting algorithm.
+\begin{enumerate}
+    \item \emph{What} is the problem that this algorithm solves?
+
+        \paragraph{Answer}
+        \todo{}
+
+    \item \emph{How} does it work? (Hint: give pseudocode!)
+
+        \paragraph{Answer}
+        \todo{}
+
+    \item \emph{How fast} does it work?  Give the asymptotic running time.
+        Note: typically, you will give this as the worst-case running time.
+        However, if you chose quicksort or another randomized algorithm, please
+        give both the worst-case running time and the expected running time.  No
+        justification of the running time is needed here.
+
+        \paragraph{Answer}
+        \todo{}
+
+    \item \emph{Why} does this work? Typically, this will be given as a loop
+        invariant proof.  For this HW, explain why it works informally, in your
+        own words.
+
+        \paragraph{Answer}
+        \todo{}
+
+\end{enumerate}
+
+Note: in all future HWs, if you are asked to come up with an algorithm, you are
+expected to give an algorithm that beats the brute force (and, if possible, of
+optimal time complexity). With your algorithm, please provide the following:
+\begin{itemize}
+    \item \emph{What}: A prose explanation of the problem and the algorithm,
+        including a description of the input/output.
+    \item \emph{How}: Psuedocode, referenced from within the prose explanation.
+    \item \emph{How Fast}: Runtime, along with justification.  (Or, in the
+        extreme, a proof of termination).
+    \item \emph{Why}: Statement of the loop invariant for each loop.
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\collab{\todo{}}
+\nextprob{Sorting before Searching?}
+Let $A$ be an array of $n$ comparable objects.  We do not know if $A$ is sorted
+or not.
+
+\begin{enumerate}
+    \item To answer the question \emph{is item $x$ in the $A$?}, should we
+        sort the array first?  Why or why not?
+
+        \paragraph{Answer}
+        \todo{}
+
+    \item Suppose we have $k$ elements that we want to find in $A$. Does this
+        change your answer? Why or why~not?
+
+        \paragraph{Answer}
+        \todo{}
+
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\collab{\todo{}}
+\nextprob{Recurrence Relations}
+Consider the function $T \colon \N \to \N$ defined by
+$$T(n) = \begin{cases}
+            1        & n=1\\
+            T(n-1)+1 & n>1.
+         \end{cases}
+$$
+What is the closed form and asymptotic the form of this recursion?  For the
+closed form, use induction to prove that it is correct.  For the asymptotic
+form, use the definition of big-Theta to justify.
+
+\paragraph{Answer}
+\todo{}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\collab{\todo{}}
+\nextprob{More Recurrence Relations}
+
+What is the asymptotic form of the following recurrence
+relations? (Show work for partial credit, but full justification is not required
+on this question).
+Let $T \colon \N \to N$ be defined by $T(1)=1$ and, for $n>1$,
+\begin{enumerate}
+    \item $T(n) = 16 T(n/4) + n$
+        \paragraph{Answer} \todo{}
+    \item $T(n) = 2 T(n/2) + n \log{n}$
+        \paragraph{Answer} \todo{}
+    \item $T(n) = 6 T(n/3) + n^2 \log{n}$
+        \paragraph{Answer} \todo{}
+    \item $T(n) = 4 T(n/2) + n^2$
+        \paragraph{Answer} \todo{}
+    \item $T(n) = 9 T(n/3) + n$
+        \paragraph{Answer} \todo{}
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\collab{\todo{}}
+\nextprob{Pancakes}
+
+Chapter 1, Problem 9, parts (a) and (b).
+
+\paragraph{Answer, Part (a)}
+
+\todo{}
+
+\paragraph{Answer, Part (b)}
+
+\todo{}
+
+
+\end{document}
