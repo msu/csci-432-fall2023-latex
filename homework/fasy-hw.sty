@@ -15,8 +15,10 @@
 \usepackage{xcolor}
 
 % ... for formatting algorithms
-\usepackage{algorithm}
-\usepackage{algpseudocode}
+\usepackage{algorithm,algorithmic}
+\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+\renewcommand{\algorithmicensure}{\textbf{Output:}}
+\renewcommand{\algorithmiccomment}[2]{\hspace{#1}$\triangleright$ {#2} \hfill }
 
 % ... common symbols
 \def\N{{\mathbb N}}
