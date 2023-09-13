@@ -15,8 +15,10 @@
 \usepackage{xcolor}
 
 % ... for formatting algorithms
-\usepackage{algorithm}
-\usepackage{algpseudocode}
+\usepackage{algorithm,algorithmic}
+\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+\renewcommand{\algorithmicensure}{\textbf{Output:}}
+\renewcommand{\algorithmiccomment}[2]{\hspace{#1}$\triangleright$ {#2} \hfill }
 
 % ... common symbols
 \def\N{{\mathbb N}}
@@ -84,7 +86,7 @@
 
 %% ... References
 
-\renewcommand{\algref}[1]    {Algorithm~\ref{alg:#1}}
+\newcommand{\algref}[1]    {Algorithm~\ref{alg:#1}}
 \newcommand{\figref}[1]     {Figure~\ref{fig:#1}}
 \newcommand{\tabref}[1]     {Table~\ref{tab:#1}}
 \newcommand{\stref}[1]      {Step~\ref{st:#1}}
