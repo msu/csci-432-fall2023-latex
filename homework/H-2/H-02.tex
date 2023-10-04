@@ -1,0 +1,133 @@
+\documentclass{article}
+\usepackage{../fasy-hw}
+
+%% UPDATE these variables:
+\renewcommand{\hwnum}{1}
+\title{Advanced Algorithms, Homework \hwnum}
+\collab{none}
+\author{\todo{Your Name Here}}
+\date{due: Wednesday, 11 October 2023}
+
+\begin{document}
+
+\maketitle
+
+This homework assignment should be
+submitted as a single PDF file both to D2L and to Gradescope.  The homework is
+due at 23:59 on the due date; however, you can continue to submit until the
+instructor begins grading, at which point no more submissions will be accepted.
+
+General homework expectations:
+\begin{itemize}
+    \item Homework should be typeset using LaTex.
+    \item Answers should be in complete sentences and proofread.
+    \item You will not plagiarize, nor will you share your written solutions
+        with classmates.
+    \item List collaborators at the start of each question using the
+        \texttt{collab} command. If this is still a `TODO' at the time of
+        submission, the problem will not
+        be graded.
+    \item List any outside resources that you used within each problem (not at
+        the end of the problem set). If not clear from context, explain how the
+        external resource was used.  Outside resources include the use of
+        ChatGPT, googling definitions, and looking up answers after you solve
+        the problem in order to `check that you got it right'.  {\bf If no outside resources are
+        used, the last line of your answer should be ``No outside resources were
+        used when working on this problem.''}  Note: in general, the assumption
+        is that you do not need any outside resources to answer the problems.
+        If you find yourself needing extra resources, it is highly advised to
+        ask for them rather than to find them on your own.
+    \item Put your answers where the \texttt{todo} command currently is (and
+        remove the \texttt{todo}, but not the word \texttt{Answer}).
+    \item If you are asked to come up with an algorithm, you are
+        expected to give an algorithm that beats the brute force (and, if possible, of
+        optimal time complexity). With your algorithm, please provide:
+        \begin{itemize}
+            \item \emph{What}: A prose explanation of the problem and the algorithm,
+                including a description of the input/output.
+            \item \emph{How}: Describe how the algorithm works, including giving
+                psuedocode for it.  Be sure to reference the pseudocode
+                from within the prose explanation.
+            \item \emph{How Fast}: Runtime, along with justification.  (Or, at
+                the very least, a proof of termination using a decrementing function).
+            \item \emph{Why}: Briefly explain why the algorithm works.  Be sure
+                to include a statement of the loop invariant for each loop, or
+                recursion invariant for each recursive function.
+        \end{itemize}
+    \item Remove the set of instructions on this page (everything from Line 15
+        through Line 59 in the LaTex file.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\collab{\todo{}}
+\nextprob{Forgotten Citations}
+
+Please read the instructions on the first page carefully.  This has been
+expanded from the last assignment.  (Note the instruction to delete the
+instructions).  If you forgot to include proper citations for H-0 or H-1, please
+give a detailed list of the missing citations and how they were used in the
+homework.
+
+\paragraph{Answer} \todo{}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\collab{\todo{}}
+\nextprob{Short Answers}
+
+Provide short answers to the following questions:
+
+\begin{enumerate}[(a)]
+    \item What is the difference between a best-case analysis (which I would
+        never ask you to do) and $\Omega$-notation?
+
+        \paragraph{Answer} \todo{}
+
+    \item Suppose you are playing a game with a die.  The game is to roll
+        one die. Let $v$ be the value on the top of the die after you roll it.
+        You earn or owe (if negative) the following amount: $(-1)^v 2v$.  What
+        is the expected amount that you earn in this game?  (If you are expected
+        to owe money, report this as a negative number).
+
+        \paragraph{Answer} \todo{}
+
+    \item Let $P(n)$ be some statement that depends on a natural number $n$.  You
+        want to prove that $P(n)$ is true for all natural numbers.  To start,
+        you prove $P(1)$ is true.  What is the inductive hypothesis?
+
+        \paragraph{Answer} \todo{}
+
+\end{enumerate}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\collab{\todo{}}
+\nextprob{Case 3 of Master's Theorem}
+
+Let $T \colon \N to \N$ be the recursive function defined by $T(n)=a
+T(n/b)+f(n)$ with $T(0)=1$.  Case 3 of Master's theorem is as follows:
+
+\emph{IF (1) there exists $\varepsilon \in \R_+$ such that $f(n)
+\in O(n^{\log_b a + \varepsilon})$ and (2) there exists $c \in
+(0,1)$ and~$n_0 \in \N$ such that for all $n \geq n_0$, $a
+f(n/b) \leq c f(n)$, THEN $T(n) \in \Theta(f(n))$.}
+
+Prove that $T(n)=3T(n/4)+ n \log n$ is in Case~3 of Master's Theorem
+and give the asymptotic running time.
+
+\paragraph{Answer}
+\todo{}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\collab{\todo{}}
+\nextprob{Redo: Pancakes}
+
+Chapter 1, Problem 9, part (a). Please use both the individual feedback and the
+classwide feedback in order to improve your response from the submission to H-1.
+
+\paragraph{Answer}
+\todo{}
+
+
+\end{document}
