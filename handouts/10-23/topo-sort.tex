@@ -1,0 +1,135 @@
+\documentclass{article}
+
+\usepackage[margin=1in]{geometry}
+
+\usepackage{algorithm,algorithmic}
+\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+\renewcommand{\algorithmicensure}{\textbf{Output:}}
+\renewcommand{\algorithmiccomment}[2]{\hspace{#1}$\triangleright$ {#2} \hfill }
+
+\usepackage{amsfonts}
+\def\R{{\mathbb R}}
+\def\N{{\mathbb N}}
+
+\title{Topological Sort: Decrementing Functions and Loop Invariants}
+\author{CSCI 432}
+
+\begin{document}
+\maketitle
+
+\noindent
+Name:\\
+Who did you work with today?
+
+\section*{Topological Sort: The Algorithm}
+
+Topological sort takes a poset $(P,\leq)$ and returns a total order of all
+objects that is \emph{compatible} with the partial order of the poset.  By
+compatible, we mean that for all $a \leq b \in P$, we have $a$ appears before
+$b$ in the total order.  For example, consider $P$ to be a set of points in
+$\R^2$ and let the partial order be the product order; that is, $(a_x,a_y) \leq
+(b_x,b_y)$ if and only if $a_x \leq b_x$ and $a_y \leq b_y$.  Given a set:
+$$ P = \{ (0,0), (\pi, \pi), (2,4), (1,2) \}$$
+we can return the following total order:
+$$[ (0,0), (1,2), (2,4), (\pi, \pi)].$$
+Note that this is not the only compatible total order.  What other total order
+could have been returned?
+
+\textbf{Answer}
+\vspace{1in}
+
+The following algorithm takes as input a poset, represented as a directed
+acyclic graph, and returns a compatible total order.  If the poset orders $a
+\leq b$, then the DAG has an edge from vertex $a$ to vertex $b$.  For this
+algorithm, vertices have at least one attribute: outgoing, which stores a list
+of vertices that define the outgoing edges.
+
+\begin{algorithm}[h]
+    \caption{Topological Sort}
+    %
+    \begin{algorithmic}[1]
+        \REQUIRE $G=(V,E)$, a DAG
+
+        \ENSURE $L$, a list of vertices in G in a total order compatible with
+        the partial order of the DAG.
+
+        \FOR {$v \in V$}
+            \STATE Add an attribute `$v$.count' and initialize it to the indegree of $v$.
+        \ENDFOR
+
+        \STATE $Q \gets$ the sent of vertices with `count'=0.\label{ln:initQ}
+
+        \STATE $L \gets$ array of length $|V|$
+        \STATE $i \gets 1$
+
+        \WHILE {$Q$ is not empty}
+            \STATE $v \gets Q.\textsc{POP}$
+            \STATE $L[i] \gets v$
+            \STATE $i++$
+            \FOR {$u \in v$.outgoing}
+                \STATE $u$.count$--$
+                \IF {$u$.count $=0$}
+                    \STATE Add $u$ to $Q$
+                \ENDIF
+            \ENDFOR
+        \ENDWHILE
+
+        \RETURN $L$
+    \end{algorithmic}
+\end{algorithm}
+
+\pagebreak
+In Line~\ref{ln:initQ}, why is $Q$ not empty?
+
+\textbf{Answer}
+\vspace{1in}
+
+Explain how topological sort is helpful for dynamic programming.
+
+\textbf{Answer}
+\vspace{1in}
+
+Walk through a small example.
+
+\textbf{Answer}
+
+\pagebreak
+\section*{Topological Sort: The Decrementing Function}
+
+What is the decrementing function for the for loop?
+
+\textbf{Answer}
+\vspace{1in}
+
+What is the decrementing function for the while loop?
+
+\textbf{Answer}
+\vspace{1in}
+
+\section*{Topological Sort: The Loop Invariant}
+
+Here, we investigate partial correctness of the while loop.  For this loop, what
+are the following statements (start with your best guess, then come back and
+revise if needed):
+
+The loop guard $G$:
+\vspace{0.5in}
+
+The post-condition $Q$:
+\vspace{0.5in}
+
+The pre-condition $P$:
+\vspace{0.5in}
+
+The loop invariant $L=L_i$:
+\vspace{0.5in}
+
+
+Can you use this loop invariant
+to prove partial correctness (Remember, there are three parts to partial
+correctness: Initialization, Maintenance, and End).
+
+\textbf{Answer}
+\vspace{1in}
+
+\end{document}
